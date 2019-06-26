@@ -11,10 +11,10 @@
     <title>Worker Management</title>
 
     <!-- Bootstrap -->
-    <link rel='stylesheet' href='/webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='${pageContext.request.contextPath}/webjars/bootstrap/3.3.7/css/bootstrap.min.css'>
 
     <!-- your css-->
-    <link rel='stylesheet' href='/resources/css/main.css'>
+    <link rel='stylesheet' href='${pageContext.request.contextPath}/resources/css/main.css'>
 </head>
 
 <!-- Fixed navbar -->
