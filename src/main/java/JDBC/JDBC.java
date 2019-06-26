@@ -11,7 +11,7 @@ public class JDBC {
 
     //  Database credentials
     static final String USER = "root";
-    static final String PASS = "Triti105567";
+    static final String PASS = "";
     static private Connection conn = null;
 
 
