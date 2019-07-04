@@ -25,7 +25,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="new">Add new worker </a></li>
+                <li class="active"><a href="${pageContext.request.contextPath}/new">Add new worker </a></li>
 
             </ul>
         </div><!--/.nav-collapse -->

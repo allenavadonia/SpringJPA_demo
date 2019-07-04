@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface BonusRepository extends JpaRepository<BonusEntity,Integer> {
+public interface BonusRepository extends JpaRepository<BonusEntity, Integer> {
     List<BonusEntity> findAllByWorkerRefId(WorkerEntity workerRefId);
 }

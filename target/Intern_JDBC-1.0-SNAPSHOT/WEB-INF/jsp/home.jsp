@@ -11,18 +11,17 @@
 <div class="container" style="margin-top: 60px;">
 
     <button class="btn btn-sm btn-primary" onclick="location.href='bonus/add/'">ADD NEW BONUS</button>
-
-    <div class="row"><%--
+    <div class="row">
         <div class="col-xs-12 col-sm-8 col-md-6">
             <form:form action="search" method="get">
                 <div class="input-group">
-                    <input name="searchInput" type="text" class="form-control" placeholder="Search by name or author..."/>
+                    <input name="searchInput" type="text" class="form-control" placeholder="Search by firstname or lastname..."/>
                     <span class="input-group-btn">
                             <button class="btn btn-primary" type="submit">Search</button>
                         </span>
                 </div>
             </form:form>
-        </div>--%>
+        </div>
 
         <div class="col-xs-12 col-sm-12 col-md-10">
             <c:if test="${not empty workerList}">
@@ -51,12 +50,21 @@
                             <td>${worker.titleEntity.workerTitle}</td>
                             <td>${worker.titleEntity.affectFrom}</td>
                             <td>
-                                <button class="btn btn-sm btn-primary"
+                                <button
+                                        class="btn btn-sm btn-primary"
                                         onclick="location.href='update/${worker.workerId}'">Edit
                                 </button>
-                                <button class="btn btn-sm btn-danger"
-                                        onclick="location.href='delete/${worker.workerId}'">Delete
-                                </button>
+                            </td>
+<%--                                <button--%>
+<%--                                        class="btn btn-sm btn-danger"--%>
+<%--                                        onclick="location.href='delete/${worker.workerId}'">Delete--%>
+<%--                                </button>--%>
+                            <td>
+                                <form:form method="post" action="/delete?id=${worker.workerId}" >
+                                    <button class="btn btn-danger" type="submit">delete</button>
+                                </form:form>
+                            </td>
+                            <td>
                                 <button class="btn btn-sm btn-success"
                                         onclick="location.href='bonus/${worker.workerId}'">View Bonus
                                 </button>
